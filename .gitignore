@@ -1,0 +1,11 @@
+# Default ignored files
+/ds_venv/
+/.idea
+# ignore dataset
+/problem-2/insurance_data.csv
+
+
+# temp file
+/test.ipynb
+/linear regression
+/Decision Tree
