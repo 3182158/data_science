@@ -7549,6 +7549,7 @@ a.anchor-link {
 <span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">mean_squared_error</span>
 <span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
 <span class="kn">from</span> <span class="nn">statsmodels.api</span> <span class="kn">import</span> <span class="n">OLS</span>
+<span class="kn">import</span> <span class="nn">pickle</span>
 </pre></div>
 </div>
 </div>
@@ -8166,7 +8167,7 @@ dtype: float64</pre>
 <div class="jp-OutputArea-child jp-OutputArea-executeResult">
 <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[ ]:</div>
 <div class="jp-RenderedText jp-OutputArea-output jp-OutputArea-executeResult" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;seaborn.axisgrid.PairGrid at 0x2ac144306d0&gt;</pre>
+<pre>&lt;seaborn.axisgrid.PairGrid at 0x1db426cd6c0&gt;</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8568,7 +8569,7 @@ Dep. Variable:                charges   R-squared:                       0.732
 Model:                            OLS   Adj. R-squared:                  0.730
 Method:                 Least Squares   F-statistic:                     483.8
 Date:                Wed, 06 Dec 2023   Prob (F-statistic):          9.15e-300
-Time:                        11:51:55   Log-Likelihood:                -10861.
+Time:                        15:02:31   Log-Likelihood:                -10861.
 No. Observations:                1070   AIC:                         2.174e+04
 Df Residuals:                    1063   BIC:                         2.177e+04
 Df Model:                           6                                         
@@ -8701,7 +8702,7 @@ Dep. Variable:                charges   R-squared:                       0.586
 Model:                            OLS   Adj. R-squared:                  0.584
 Method:                 Least Squares   F-statistic:                     224.9
 Date:                Wed, 06 Dec 2023   Prob (F-statistic):          1.32e-178
-Time:                        11:51:55   Log-Likelihood:                -9459.2
+Time:                        15:02:31   Log-Likelihood:                -9459.2
 No. Observations:                 959   AIC:                         1.893e+04
 Df Residuals:                     952   BIC:                         1.897e+04
 Df Model:                           6                                         
@@ -8834,7 +8835,7 @@ Dep. Variable:                charges   R-squared:                       0.748
 Model:                            OLS   Adj. R-squared:                  0.746
 Method:                 Least Squares   F-statistic:                     522.0
 Date:                Wed, 06 Dec 2023   Prob (F-statistic):          9.11e-312
-Time:                        11:51:55   Log-Likelihood:                -10763.
+Time:                        15:02:31   Log-Likelihood:                -10763.
 No. Observations:                1063   AIC:                         2.154e+04
 Df Residuals:                    1056   BIC:                         2.157e+04
 Df Model:                           6                                         
@@ -8942,7 +8943,7 @@ Dep. Variable:                charges   R-squared:                       0.748
 Model:                            OLS   Adj. R-squared:                  0.747
 Method:                 Least Squares   F-statistic:                     627.0
 Date:                Wed, 06 Dec 2023   Prob (F-statistic):          3.48e-313
-Time:                        11:51:56   Log-Likelihood:                -10763.
+Time:                        15:02:31   Log-Likelihood:                -10763.
 No. Observations:                1063   AIC:                         2.154e+04
 Df Residuals:                    1057   BIC:                         2.157e+04
 Df Model:                           5                                         
@@ -8967,6 +8968,53 @@ Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 </pre>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<h3 id="Store-Model-with-pickle-as-binary-file">Store Model with pickle as binary file<a class="anchor-link" href="#Store-Model-with-pickle-as-binary-file">¶</a></h3>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">final_model</span><span class="p">,</span> <span class="nb">open</span><span class="p">(</span><span class="s1">'insurance_model.pkl'</span><span class="p">,</span><span class="s1">'wb'</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<hr/>
 </div>
 </div>
 </div>
