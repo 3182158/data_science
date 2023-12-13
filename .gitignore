@@ -3,6 +3,7 @@
 /.idea
 # ignore dataset
 /problem-2/insurance_data.csv
+/problem-1/US_Heart_Patients.csv
 
 
 # temp file
